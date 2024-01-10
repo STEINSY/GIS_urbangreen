@@ -1,0 +1,42 @@
+SEED: 5
+DEBUG: False
+LOG_FREQ: 100
+INFERENCE_CHECKPOINT: 15
+
+TRAINER:
+  LR: 2e-6
+  BATCH_SIZE: 8
+  EPOCHS: 3
+  OPTIMIZER: 'adamw'
+
+MODEL:
+  TYPE: 'unet'
+  OUT_CHANNELS: 1
+  IN_CHANNELS: 4
+  LOSS_TYPE: 'PowerJaccardLoss'
+  TOPOLOGY: [64, 128, 256, 512, 1024,]
+
+DATALOADER:
+  NUM_WORKER: 8
+  SHUFFLE: True
+  YEARS: [2018]
+  LABEL: 'ua'
+  SENSOR: 'sentinel2'
+  POS_CLASS: [14100,23000,31000,32000]
+  S2_BANDS: ['B2', 'B3', 'B4', 'B8']
+  L8_BANDS: ['B2', 'B3', 'B4', 'B5']
+
+AUGMENTATION:
+  CROP_SIZE: 256
+  RANDOM_FLIP: True
+  RANDOM_ROTATE: True
+  COLOR_SHIFT: False
+  GAMMA_CORRECTION: False
+
+DATASET:
+  TRAIN: ['arezzo', 'avignon', 'badajoz', 'bergamo', 'bergen', 'bern', 'coventry', 'dublin', 'gdansk', 'glasgow',
+  'gottingen', 'koln', 'linkoping', 'lugano', 'napoli', 'norwich', 'oulu', 'porto', 'poznan', 'roma', 'stockholm',
+  'tallinn', 'toulouse', 'umea', 'valencia']
+  VAL: ['lyon', 'malaga', 'malta','milano', 'nantes']
+
+

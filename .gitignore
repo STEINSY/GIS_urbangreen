@@ -1,0 +1,5 @@
+data
+output/network/*
+output/inference/*
+wandb/*
+configs/optical.yaml.pt
