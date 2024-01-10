@@ -1,9 +1,7 @@
 
 # About
 
-This code was developed within the EU Horizon 2020 project HARMONIA with the aim to map urban green areas and detection urban green area changes in the project's pilot cities (Milan, Ixelles, Piraeus, and Sofia) using multi-spectra satellite imagery. The dataset used for model training features Landsat 8 and Sentinel-2 imagery for the reference years 2013 and 2018, respectively. Corresponding urban green labels were derived from the Urban Atlas suite.
-
-Please follow the steps below to perform urban green mapping:
+AG2417 PROJECT: urban Green prediction based on senitinel2 sensor data
 
 ## 1 Dataset download
 
